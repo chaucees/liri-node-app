@@ -1,3 +1,6 @@
+
+
+
 console.log('this is loaded');
 
 var twitterKeys = {
@@ -7,4 +10,10 @@ var twitterKeys = {
   access_token_secret: 'qPKt3idifnNjI0kU73zq95OBYNFFYaCb1fWi5qRdLnMlA',
 }
 
-module.exports = twitterKeys;
+module.exports = {twitter: twitterKeys, keyfile: key.js}
+
+
+var spotifyKeys = {
+  client_id: 'f9706339cfb34e5a8cab526449fb464f',
+  client_secret: 'f9e5a40de7dc44ecaa74e395aa2e3d1a',
+}

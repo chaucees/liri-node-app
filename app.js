@@ -25,19 +25,35 @@ function searchSpotify(songName) {
     // look at HW instructions to get link and sign up for spotify API
     // look at npm doc for node-spotify-api for js code to search songs
 
+    
 }
+
+// Search Spotify
+var Spotify = require('node-spotify-api');
+ 
+var spotify = new Spotify({
+  id: $(client_key),
+  secret: <$(client_secret),
+});
+ 
+spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+  if (err) {
+    return console.log('Error occurred: ' + err);
+  }
+ 
+console.log(data); 
+});
 
 // Search Twitter 
 function searchTwitter() {
-    // look at HW instructions to get link and sign up for Twitter API
-    // look at npm doc for twitter for js code to get tweets
+    // js code to get tweets
 
 }
 
 // Search OMDB 
 function searchOMDB(movieName) {
-    // look at npm doc for request package for js code to make an API request
-    // look at HW instructions for link to OMDB API. use this with request pkg to search for movies.
+    //request package for js code to make an API request
+    // link to OMDB API. use this with request pkg to search for movies.
 }
 
 main(process.argv[2], process.argv[3]);
